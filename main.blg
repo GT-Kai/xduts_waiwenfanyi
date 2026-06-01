@@ -1,0 +1,17 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'main.blg'
+[39] biber-darwin:342> INFO - === Tue Jun  2, 2026, 00:11:01
+[49] Biber.pm:421> INFO - Reading 'main.bcf'
+[115] Biber.pm:1002> INFO - Found 18 citekeys in bib section 0
+[123] Biber.pm:4487> INFO - Processing section 0
+[127] Biber.pm:4678> INFO - Looking for bibtex file 'ref.bib' for section 0
+[128] bibtex.pm:1713> INFO - LaTeX decoding ...
+[139] bibtex.pm:1519> INFO - Found BibTeX data source 'ref.bib'
+[298] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[299] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[299] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[299] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[306] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[314] bbl.pm:779> INFO - Output to main.bbl
+[315] Biber.pm:132> WARN - Duplicate entry key: 'reynisson2020netmhcpan' in file 'ref.bib', skipping ...
+[315] Biber.pm:134> INFO - WARNINGS: 1

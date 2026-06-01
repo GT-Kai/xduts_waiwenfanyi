@@ -1,0 +1,96 @@
+\documentclass{xduugthesis}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+\xdusetup{
+  style = {
+    latin-font = tacn,
+    % math-font = termes,
+  },
+  info = {
+    title = {基于深度学习的免疫多肽结合预测\\模型的优化与部署},
+    author = {李常凯},
+    department = {生命科学技术学院},
+    major = {生物医学工程},
+    class-id = {2215011},
+    student-id = {22159100047},
+    % supervisor = {曾文锋},
+    supervisor-school = {徐欣怡},
+    supervisor-enterprise = {曾文锋},
+    bib-resource = {ref.bib},
+    % abstract = {chapters/abstract_zh.tex},
+    abstract* = {chapters/abstract_en.tex},
+    % keywords = {MHC-I 肽段结合预测,模型轻量化,降维,INT8量化,索引检索},
+    % keywords* = {MHC-I peptide binding prediction,model lightweighting,dimensionality reduction,INT8 quantization,index retrieval},
+    acknowledgements = {chapters/acknowledgement.tex}
+    }
+  }
+
+% 跳过模板默认封面和中文摘要，仅保留英文摘要、目录和正文。
+\ExplSyntaxOn
+\cs_set:Npn \__xdu_frontmatter:
+  {
+    \__xdu_load_main_geometry:
+    \pagestyle     { plain }
+    \pagenumbering { roman }
+    \__xdu_n_chapter_head_ii:nn
+      { ABSTRACT } { \rmfamily \zihao { 3 } \bfseries \centering }
+    \group_begin:
+      \dim_set:Nn \parindent { 2 \ccwd }
+      \rmfamily \zihao { -4 }
+      \file_if_exist_input:n { \l__xdu_abstract_en_tl }
+    \group_end:
+    \cs_set:Npn \__xdu_keywords_space: { \hspace { 2em plus 1em minus 1em } }
+    \group_begin:
+      \rmfamily \zihao { -4 } \bfseries \__xdu_bold_math: \par
+      \__xdu_typeout_keywords:nNn
+        { Keywords:~ } { \l__xdu_keywords_en_clist } { \__xdu_keywords_space: }
+    \group_end:
+    \cleardoublepage
+    \setcounter { tocdepth } { 5 }
+    \__xdu_n_chapter_head:nn
+      { \__xdu_lang_switch:nn { 目录            } { Contents } }
+      { \__xdu_lang_switch:nn { 目 { \quad } 录 } { Contents } }
+    \use:c { @starttoc } { toc }
+    \cleardoublepage
+  }
+\ExplSyntaxOff
+
+% 目录章节标题取消粗体
+\renewcommand{\cftchapfont}{\rmfamily\zihao{-4}}
+% 目录章节页码取消粗体
+\renewcommand{\cftchappagefont}{\rmfamily\zihao{-4}}
+% 章节引导点也取消粗体
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+\ctexset{
+  subsection = {
+    afterskip = 0.5\baselineskip
+  }
+}
+
+\begin{document}
+
+% 临时解决\cite{}没有自动补全提示的问题
+% 详见 https://github.com/note286/xduts/discussions/157
+\iffalse
+  \addbibresource{ref.bib}
+\fi
+
+
+\include{chapters/1.introduction}
+
+\include{chapters/2.theory_method_design}
+
+\include{chapters/3.experiment_result}
+
+\include{chapters/4.system_design_deployment}
+
+\include{chapters/5.conclusion}
+
+
+\end{document}

@@ -1,0 +1,83 @@
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}绪论}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}国内外研究现状}{2}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}MHC-I 肽段结合预测研究进展}{2}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}深度学习模型轻量化与部署优化研究现状}{3}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}现有工作存在的不足}{4}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}本文主要研究内容}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}论文结构安排}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}本章小结}{6}{section.1.4}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}理论基础与方法设计}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}免疫多肽结合预测任务基础}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}MHC-I分子与抗原递呈过程}{7}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}HLA等位基因多态性与预测难点}{7}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}免疫多肽结合预测的任务形式}{8}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}FennOmix.MHC模型与表示学习基础}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}FennOmix.MHC基础框架}{8}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}输入表示与双模态编码}{9}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}对比学习与嵌入空间度量}{9}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}评价指标与下游检索任务}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}基于排名阈值的召回率}{10}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}基于距离阈值的召回率}{11}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}缩库辅助搜库与Overlap评价}{11}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}面向部署的模型轻量化方法设计}{13}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}原始模型部署瓶颈与轻量化思路}{13}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}编码维度压缩设计}{15}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}线性与非线性降维方案设计}{16}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}基于重要性分析的结构剪枝}{18}{subsection.2.4.4}%
+\contentsline {section}{\numberline {2.5}肽段缓存压缩与索引机制设计}{20}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}大规模肽段缓存问题}{20}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}基于INT8的缓存量化压缩}{20}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}自定义二进制缓存格式}{22}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}肽段哈希索引与加载策略}{23}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}在线查询与匹配执行流程}{25}{subsection.2.5.5}%
+\contentsline {section}{\numberline {2.6}本章小结}{26}{section.2.6}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}实验设计与结果分析}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}实验环境与评价方法}{27}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}实验环境配置}{27}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}任务设置}{28}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}评价指标设置}{28}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}不同输出维度实验结果分析}{28}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}不同维度模型的整体性能比较}{28}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}不同维度模型的缓存成本比较}{29}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}64 维方案的综合优势分析}{30}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}线性与非线性降维模型比较分析}{30}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}实验目的与比较对象}{30}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}常规预测指标比较}{30}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}下游缩库辅助搜库结果比较}{31}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}结果分析与结论}{32}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}剪枝实验结果分析}{33}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}剪枝重要性分析结果}{33}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}剪枝前后性能比较}{33}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}剪枝结果讨论}{34}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}缓存压缩与索引机制实验分析}{34}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}64 维缓存的压缩需求}{34}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}INT8 量化压缩结果}{34}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}索引机制与加载策略分析}{35}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}查询链路效果分析}{36}{subsection.3.5.4}%
+\contentsline {section}{\numberline {3.6}综合讨论}{36}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}从模型精度到系统部署的统一优化路径}{36}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}实验结果的主要结论}{36}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}当前实验的局限性}{37}{subsection.3.6.3}%
+\contentsline {section}{\numberline {3.7}本章小结}{37}{section.3.7}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}系统设计与部署分析}{39}{chapter.4}%
+\contentsline {section}{\numberline {4.1}系统总体架构设计}{39}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}系统设计目标}{39}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}离线构建与在线查询流程}{39}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}系统模块划分}{40}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}关键模块实现与协同流程}{40}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}模型训练与轻量化模块}{40}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}肽段缓存压缩模块实现}{41}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}肽段索引检索模块实现}{42}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}在线预测执行模块实现}{42}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}模块协同关系}{42}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}部署模式与资源开销分析}{42}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}单机部署模式分析}{42}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}部署设计意义}{43}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}本章小结}{43}{section.4.4}%
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}总结与展望}{45}{chapter.5}%
+\contentsline {section}{\numberline {5.1}全文总结}{45}{section.5.1}%
+\contentsline {section}{\numberline {5.2}本文工作不足}{45}{section.5.2}%
+\contentsline {section}{\numberline {5.3}后续研究展望}{46}{section.5.3}%
+\contentsline {section}{\numberline {5.4}本章小结}{46}{section.5.4}%
+\contentsline {chapter}{致谢}{47}{section*.27}%
+\contentsline {chapter}{参考文献}{49}{section*.29}%
